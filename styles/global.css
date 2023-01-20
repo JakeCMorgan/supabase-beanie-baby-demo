@@ -1,6 +1,6 @@
 :root {
-    --background: rgb(222, 204, 163);
-    --header-background: rgb(254, 251, 245);
+    --background: rgb(255, 238, 197);
+    --header-background: rgb(245, 230, 255);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
@@ -23,13 +23,43 @@ header {
     gap: 10px;
 
     background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.12), 0 5px 6px rgba(0, 0, 0, 0.24);
 }
 
 header .logo {
-    height: 100%;
+    height: 130%;
 }
 
 main {
-    padding: 20px;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    height: 175px;
+    width: 350px;
+    color: rgb(255, 255, 255);
+    background: rgb(55, 167, 107);
+    border: 5px solid rgb(238, 203, 255);
+    border-radius: 25px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.card img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+    border-radius: 200px;
 }
