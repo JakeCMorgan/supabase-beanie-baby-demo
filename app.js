@@ -1,8 +1,13 @@
 /* Imports */
 
 /* Get DOM Elements */
+const beanieList = document.getElementById('beanie-list');
+const astroSignSelect = document.getElementById('astro-sign-selector');
+const selector = document.getElementById('selector');
 
 /* State */
+let beanies = [];
+let astroSigns = [];
 
 /* Events */
 
