@@ -1,7 +1,7 @@
 /* Imports */
 
 import { getAstroSigns, getBeanies } from './fetch-utils.js';
-import { renderBeanie } from './render-utils.js';
+import { renderAstroSign, renderBeanie } from './render-utils.js';
 
 /* Get DOM Elements */
 const beanieList = document.getElementById('beanie-list');
@@ -17,6 +17,7 @@ window.addEventListener('load', async () => {
     findBeanies();
     const response = await getAstroSigns();
     astroSigns = response.data;
+    displayAstroOptions();
 });
 
 async function findBeanies(astroSign) {
@@ -36,4 +37,9 @@ function displayBeanies() {
     }
 }
 
-// (don't forget to call any display functions you want to run on page load!)
+function displayAstroOptions() {
+    for (let astroSign of astroSigns) {
+        const option = renderAstroSign(astroSign);
+        astroSignSelect.append(option);
+    }
+}
